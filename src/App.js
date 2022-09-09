@@ -9,7 +9,11 @@ function App() {
       <Menu />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/depto" element={<Depto />} />
+        {/* ROUTE COM POSSIBILIDADE DE RECEBER ID E ABRIR OUTRA PÁGINA  */}
+        <Route path="/depto">
+          <Route index element={<Depto />} />
+          <Route path=":id" element={<Depto />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   );
