@@ -11,7 +11,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         {/* ROUTE COM POSSIBILIDADE DE RECEBER ID E ABRIR OUTRA PÁGINA  */}
-        <Route path="/depto">
+        <Route path="/departamentos">
           <Route index element={<Depto />} />
           <Route path=":id" element={<DeptoDetalhes />} />
         </Route>
