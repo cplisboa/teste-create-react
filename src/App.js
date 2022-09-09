@@ -1,11 +1,12 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Depto from "./pages/Depto";
+import Menu from "./components/Menu";
 
 function App() {
   return (
     <BrowserRouter>
-      {/* AQUI TEREMOS UM MENU */}
+      <Menu />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/depto" element={<Depto />} />
