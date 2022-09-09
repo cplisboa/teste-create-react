@@ -1,10 +1,15 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 
 const DeptoDetalhes = () => {
+  const { id } = useParams();
 
-    return (
-        <h1> Departamento detalhe </h1>
-    )
-}
+  return (
+    <>
+      <h1> Departamento detalhe </h1>
+      <p> Id do Departamento: {id}</p>
+    </>
+  );
+};
 
-export default DeptoDetalhes
+export default DeptoDetalhes;

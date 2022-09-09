@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import Depto from "./pages/Depto";
 import DeptoDetalhes from "./pages/DeptoDetalhes";
 import Menu from "./components/Menu";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route index element={<Depto />} />
           <Route path=":id" element={<DeptoDetalhes />} />
         </Route>
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   );
