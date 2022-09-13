@@ -7,6 +7,7 @@ import NotFound from "./pages/NotFound";
 import FormDepartamento from "./pages/FormDepartamento";
 
 function App() {
+  
   return (
     <BrowserRouter>
       <Menu />
