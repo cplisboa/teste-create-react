@@ -6,7 +6,10 @@ const Menu = () => {
     <nav>
       <Link to="/">Home</Link>
       <Link to="/departamentos"> Departamentos </Link>
-      <Link to="/departamentos/new"> Add Departamento </Link>
+      <Link to="/departamentos/new" state={{ nome: "Cicero" }}>
+        {" "}
+        Add Departamento{" "}
+      </Link>
     </nav>
   );
 };

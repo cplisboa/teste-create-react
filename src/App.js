@@ -5,6 +5,7 @@ import DeptoDetalhes from "./pages/DeptoDetalhes";
 import Menu from "./components/Menu";
 import NotFound from "./pages/NotFound";
 import FormDepartamento from "./pages/FormDepartamento";
+import "./assets/scss/main.scss";
 
 function App() {
   
