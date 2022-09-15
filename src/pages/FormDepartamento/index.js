@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Botao from "../../components/Botao";
 import { useLocation } from "react-router-dom";
+import Mensagem from "./styles";
 
 const FormDepartamento = (adicionaDepto) => {
   const { state } = useLocation();
@@ -50,7 +51,7 @@ const FormDepartamento = (adicionaDepto) => {
       />
       <br />
       <Botao nome="Enviar" onClick={validaForm} />
-      <p>{msg}</p>
+      <Mensagem>{msg}</Mensagem>
     </>
   );
 };

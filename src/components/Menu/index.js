@@ -1,16 +1,13 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import {LinkNav, Nav} from "./styles";
 
 const Menu = () => {
   return (
-    <nav>
-      <Link to="/">Home</Link>
-      <Link to="/departamentos"> Departamentos </Link>
-      <Link to="/departamentos/new" state={{ nome: "Cicero" }}>
-        {" "}
-        Add Departamento{" "}
-      </Link>
-    </nav>
+    <Nav>
+      <LinkNav to="/">Home</LinkNav>
+      <LinkNav to="/departamentos"> Departamentos </LinkNav>
+      <LinkNav to="/departamentos/new" state={{ nome: "Cicero" }}> Add Departamento </LinkNav>
+    </Nav>
   );
 };
 
