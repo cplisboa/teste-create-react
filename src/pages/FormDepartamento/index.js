@@ -10,18 +10,22 @@ const FormDepartamento = (adicionaDepto) => {
   const [nome, setNome] = useState("");
   const [sigla, setSigla] = useState("");
   const [msg, setMsg] = useState("");
+  const [erro, setErro] = useState("erro");
 
   const validaForm = () => {
     if (nome === "") {
       setMsg("Preencha o nome");
+      setErro("erro");
       return false;
     }
     if (sigla === "") {
       setMsg("Preencha a sigla");
+      setErro("erro");
       return false;
     }
     // sucesso!
-    setMsg("");
+    setErro("nao");
+    setMsg("Sucesso");
     setNome("");
     setSigla("");
   };
@@ -51,7 +55,7 @@ const FormDepartamento = (adicionaDepto) => {
       />
       <br />
       <Botao nome="Enviar" onClick={validaForm} />
-      <Mensagem>{msg}</Mensagem>
+      <Mensagem type={erro}> {msg} </Mensagem>
     </>
   );
 };
