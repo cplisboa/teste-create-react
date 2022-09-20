@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Card from "../../components/Card";
 
 const departamentos = [
   { id: 1, nome: "Recursos Humanos", sigla: "RH" },
@@ -14,7 +15,7 @@ const Depto = () => {
       {departamentos.map((dep) => {
         return (
           <p>
-            <Link key={dep.id} to={`/departamentos/${dep.id}`}> {`Departamento ${dep.id}`} </Link>
+            <Link key={dep.id} to={`/departamentos/${dep.id}`}> <Card titulo={dep.nome} /></Link>
             <br />
           </p>
         );
@@ -23,4 +24,4 @@ const Depto = () => {
   );
 };
 
-export default Depto;
+export default Depto; 
