@@ -1,12 +1,13 @@
 import React from "react";
-import Botao from "../Botao"
+import Botao from "../Botao";
+import { Link } from "react-router-dom";
 
 
-const Card = ({titulo}) => {
+const Card = ({key, to, titulo}) => {
 
     return(
         <>
-            <h3> {titulo} </h3>
+            <Link key={key} to={to}> {titulo} </Link>
             <Botao nome="Editar"/>
             <Botao nome="Excluir"/>
         </>
